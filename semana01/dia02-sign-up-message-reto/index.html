@@ -9,44 +9,59 @@
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
+  <!--<style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
+-->
+  <link rel="stylesheet" href="./styles.css">
+
 </head>
 <body>
-
+<main>
   <!-- Sign-up form start -->
+<section class="content">
 
-  Stay updated!
+<span id="titulo">Stay updated!</span>
 
-  Join 60,000+ product managers receiving monthly updates on:
+<span>Join 60,000+ product managers receiving monthly<br>updates on:</span><br>
+<span><img src="./assets/images/icon-list.svg">Product discovery and building what matters</span>
+<span><img src="./assets/images/icon-list.svg">Measuring to ensure updates are a success</span>
+<span><img src="./assets/images/icon-list.svg">And much more!</span>
+<br>
 
-  Product discovery and building what matters
-  Measuring to ensure updates are a success
-  And much more!
+<form class="formEmail">
+<label for="Email">Email address</label>
+<input type="Email" name="Email address" placeholder="email@company.com" id="Email">
+</form>
+<br>
 
-  Email address
-  email@company.com
-
-  Subscribe to monthly newsletter
+<button>Subscribe to monthly newsletter</button>
+ </section>
+ 
+ <section class="photo"></section>
 
   <!-- Sign-up form end -->
 
   <!-- Success message start -->
-
+<!--
   Thanks for subscribing!
 
   A confirmation email has been sent to ash@loremcompany.com. 
   Please open it and click the button inside to confirm your subscription.
 
   Dismiss message
+-->
+ 
 
   <!-- Success message end -->
-  
-  <div class="attribution">
+  <!--
+    <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+  -->
+
+  </main>
 </body>
 </html>
