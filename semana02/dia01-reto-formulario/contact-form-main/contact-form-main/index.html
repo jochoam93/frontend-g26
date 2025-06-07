@@ -2,43 +2,62 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
   <link rel="stylesheet" href="styles.css">
-  
-  <title>Contact form</title>
-
 </head>
 <body>
+  <main class="contact-form">
+    <h1>Contact Us</h1>
 
+    <form>
 
-  Contact Us
+      <div class="row">
+      <label>
+        First Name 
+        <input type="text" /> 
+        <span>This field is required</span>
+      </label>
 
-  First Name
-  This field is required
+      <label>
+        Last Name
+        <input type="text" />
+        <span>This field is required</span>
+      </label>
+      </div>
+     
+      <label>
+        Email Address
+        <input type="email" />
+        <span>This field is required</span>
+      </label>
 
-  Last Name
-  This field is required
+      <div class="row options">
+    <label>
+        <input type="radio" name="options"/>
+        Query Type
+      </label>
 
-  Email Address
-  Please enter a valid email address
-  This field is required
+      <label>
+        <input type="radio" name="options"/>
+        Support Request
+      </label>
+      </div>
+   
 
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
+      <label>
+        Message
+        <textarea rows="5"></textarea>
+        <span>This field is required</span>
+      </label>
 
-  Message
-  This field is required
+      <label>
+        <input type="checkbox" />
+        I consent to being contacted by the team
+      </label>
 
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
-
-  Submit
-
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-
+      <input type="submit" />
+    </form>
+  </main>
 </body>
 </html>
