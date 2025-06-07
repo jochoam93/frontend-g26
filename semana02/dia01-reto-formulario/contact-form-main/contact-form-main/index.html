@@ -14,30 +14,31 @@
 
       <div class="row">
       <label>
-        First Name 
+        First Name<b class="req">*</b>
         <input type="text" /> 
         <span>This field is required</span>
       </label>
 
       <label>
-        Last Name
+        Last Name<b class="req">*</b>
         <input type="text" />
         <span>This field is required</span>
       </label>
       </div>
      
       <label>
-        Email Address
+        Email Address<b class="req">*</b>
         <input type="email" />
         <span>This field is required</span>
       </label>
-
+      
+      <label>Query Type<b class="req">*</b></label>
       <div class="row options">
-    <label>
+      
+      <label>
         <input type="radio" name="options"/>
-        Query Type
+        General Enquiry
       </label>
-
       <label>
         <input type="radio" name="options"/>
         Support Request
@@ -46,14 +47,14 @@
    
 
       <label>
-        Message
+        Message<b class="req">*</b>
         <textarea rows="5"></textarea>
         <span>This field is required</span>
       </label>
 
       <label>
         <input type="checkbox" />
-        I consent to being contacted by the team
+        I consent to being contacted by the team<b class="req">*
       </label>
 
       <input type="submit" />
