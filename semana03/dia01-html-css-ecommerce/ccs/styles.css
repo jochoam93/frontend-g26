@@ -1,3 +1,102 @@
-body{
-    background: red;
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+/*custom propierties -- variables / constantes */
+
+:root{
+
+  /*  --fondo: orange; / var(--fondo); */  
+    /*fonts*/
+
+    --font-primary: "Kumbh Sans", sans-serif;
+    --font-size: 16px;
+
+
+    /*colors*/
+
+
+
+--primary-pale-orange: hsl(25, 100%, 94%);
+
+--neutral-very-dark-blue: hsl(220, 13%, 13%);
+--neutral-dark-grayish-blue: hsl(219, 9%, 45%);
+--neutral-grayish-blue: hsl(220, 14%, 75%);
+--neutral-light-grayish-blue: hsl(223, 64%, 98%);
+--neutral-white: hsl(0, 0%, 100%);
+--neutral-black: hsl(0, 0%, 0%);
+
+
 }
+
+/*general*/
+
+
+*{
+box-sizing: border-box;
+margin: 0;
+}
+
+html{
+
+    font-size: var(--font-size);
+}
+
+body{
+  
+    font-family: var(--font-primary);
+    
+}
+
+img{
+    /*RWD PARA IMAGENES*/
+    max-width: 100%;
+    height: auto;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/*utilitarios*/
+
+.wrapper{
+
+    width: min(100%, 1200px);
+    margin: 0 auto;
+}
+
+header{
+
+    height: 4.5rem; /*72px;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--neutral-grayish-blue);
+    padding: 1.5rem 1rem;
+}
+
+.header__wrapper{
+
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.header__links{
+    font-size: .9rem;
+    display: flex;
+    gap: 1rem;
+    
+
+    color: var(--neutral-dark-grayish-blue);
+
+}
+
+.header__icons{
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/*product detail section*/
