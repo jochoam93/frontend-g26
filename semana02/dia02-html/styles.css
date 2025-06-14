@@ -5,6 +5,13 @@ font-family: "Open Sans", sans-serif;
 font-family: "Raleway", sans-serif;
 */
 
+/*
+576px  -> pantallas pequeñas (celulares)
+768px  -> pantallas pequeñas (tablets y celulares)
+992px  -> pantallas medianas (Desktop)
+1200px -> pantallas grandes (Desktops, TVs)
+*/
+
 /*Estilos generales*/
 
 * { /*selector universal*/
@@ -30,6 +37,11 @@ a {
     text-decoration: none;
 }
 
+img{
+    /*RWD (responsive web design) para imagenes*/
+    max-width: 100%;
+    height: auto; 
+}
 /*Utilitarios*/
 
 .hidden{
@@ -37,7 +49,8 @@ a {
 }
 
 .wrapper{
-    width: 1000px;
+    /*width: 1000px;*/
+    width: min(100% - 3rem, 1440px);/*ancho min, ancho max*/
 }
 
 /*header section*/
@@ -68,6 +81,16 @@ gap: 3rem;    /*3rem = 14px * 3 */
     gap: 2rem;
     padding-top: 3rem;
     padding-bottom: 12rem;
+   /*
+    background-image: url(./images/bg-curvy-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    */
+
+    background: url(./images/bg-curvy-desktop.svg) no-repeat bottom / contain;
+    
+    
 
 }
 
@@ -79,7 +102,8 @@ gap: 3rem;    /*3rem = 14px * 3 */
 
 .hero__title{
 
-    width: 720px;
+   /* width: 720px; */
+    width: min(100% -3rem,720px);
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 2.9rem;
@@ -88,14 +112,14 @@ gap: 3rem;    /*3rem = 14px * 3 */
 }
 .hero__text{
 
-    width: 600px;
+    width: min(100%-3rem, 600px);
     font-weight: 400;
     font-size: 1.2rem;
     text-align: center;
 }
 
 .hero__button{
-
+    
     border: none;
     border-radius: 7rem;
     min-width: 220px;
@@ -103,6 +127,19 @@ gap: 3rem;    /*3rem = 14px * 3 */
     /*aplicar el degradado en el button*/
     background-color: hsl(198, 60%, 50%);
     padding: 1rem 1.5rem;
+    /*degradado en el boton - linear-gradient(grados, color1, color2) */
+    background: linear-gradient(90deg,hsl(176, 68%, 64%) 0%,hsl(198, 60%, 50%) 100%);
+    transition: background 2s ease;
+    
+}
+
+.hero__button:hover{
+    
+    background: hsl(198, 60%, 50%) 85%;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    transform: scale(1.1);
+    transform: rotate(10deg);
 }
 
 .features{
@@ -110,10 +147,17 @@ gap: 3rem;    /*3rem = 14px * 3 */
    
     background-color: hsl(218, 28%, 13%);
     display: grid;
-    grid-template-columns: 340px 340px;
+    grid-template-columns: 340px; /*mobile first*/
     gap: 5rem;
     justify-content: center;
-    
+
+}
+
+/*MEDIA QUERY: Se aplica a dispositivos moviles, tables o desktops*/
+@media(min-width: 1200px){
+.features{
+    grid-template-columns: 340px 340px;
+}
 }
 
 .feature{
@@ -144,13 +188,23 @@ height: 68px;
 
 .collaboration{
 
-    border: 1px solid greenyellow;
+    
     display: flex;
+    flex-direction: column; /*mobile*/
     justify-content: center;
     align-items: center;
     gap: 4rem;
-    margin-top: 8rem;
+    margin-top: 8rem; 
 }
+
+/*media query para adaptar la seccion collaboration a mobile*/
+
+@media(min-width: 1200px){
+.collaboration{
+    flex-direction: row;
+    }
+}
+
 
 .how_works{
     display: flex;
@@ -178,7 +232,192 @@ height: 68px;
 
 /*Testimonials section - maquetar y aplicar estilos en esta seccion*/
 
-.testimonials{
-border: 1px solid red;
+.testimonials {
+ 
+
+  background-color: hsl(218, 28%, 13%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  padding-top: 8rem;
+  padding-bottom: 18rem;
 }
 
+@media (min-width: 1200px) {
+  .testimonials {
+    flex-direction: row;
+  }
+}
+
+.testimonial {
+  width: 23rem; /* 23rem = 14px x 23 = 322px */
+  /* padding: TOP RIGHT BOTTOM LEFT; */
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  border-radius: 0.5rem;
+  border: 0.5rem solid hsla(215, 52%, 9%, 0.3);
+  background-color: hsl(219, 30%, 18%);
+}
+
+.testimonial__text {
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.testimonial__profile {
+  display: flex;
+  gap: .5rem;
+
+  font-size: .9rem;
+}
+
+.testimonial__profile img {
+  border-radius: 50%;
+}
+
+.testimonial__profile h4 {
+  font-weight: 700;
+}
+
+.testimonial__profile h5 {
+  font-weight: 400;
+}
+
+/* EARLY-ACCESS SECTION  */
+
+.early_access {
+  /* border: 1px solid yellow; */
+
+  width: min(100% - 3rem, 51.5rem);
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+
+  background-color: hsl(219, 30%, 18%);
+  border-radius: 1rem;
+  box-shadow: 3px 3px 10px #111;
+}
+
+.early_access h2 {
+  font-size: 2rem;
+}
+
+.early_access p {
+  text-align: center;
+}
+
+.early_access form {
+  display: flex;
+  gap: 2rem;
+
+  width: 100%;
+}
+
+.early_access input[type=text] {
+  border-radius: 1.5rem;
+  border: 0;
+  padding: 1rem 2rem;
+  width: min(100%, 30rem);
+}
+
+.early_access input[type=submit] {
+  border: none;
+  border-radius: 7rem;
+  padding: 1rem 1.5rem;
+  color: hsl(0, 0%, 100%);
+  background: 
+    linear-gradient(
+      90deg, 
+      hsl(176, 68%, 64%) 0%, 
+      hsl(198, 60%, 50%) 100%
+    );
+  transition: all 1s ease;
+}
+
+.early_access input[type=submit]:hover {
+  background: 
+    linear-gradient(
+      90deg, 
+      hsl(176, 68%, 64%) 35%, 
+      hsl(198, 60%, 50%) 100%
+    );
+  cursor: pointer;
+}
+
+/* FOOTER SECTION  */
+
+.footer {
+  position: relative;
+
+  background-color: hsl(216, 53%, 9%);
+
+  padding: 15rem 0 5rem 0;
+}
+
+.footer--wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+
+  /* border: 1px solid red; */
+  width: min(100% - 3rem, 76rem);
+  margin: 0 auto;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  width: 100%;
+  justify-content: space-between;
+}
+
+@media (min-width: 1200px) {
+  .footer-info {
+    flex-direction: row;
+  }
+}
+
+.footer-info__description {
+  width: 22rem;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.footer-info__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer-info__contact span {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-info__links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer-info__social {
+  display: flex;
+  gap: 1.5rem;
+}
