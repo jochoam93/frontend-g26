@@ -1,0 +1,56 @@
+*{
+box-sizing: border-box;
+margin: 0;
+}
+
+body{
+
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/*utilitarios*/
+
+.wrapper{
+
+    width: min(100%, 1440px);
+    margin: 0 auto;
+}
+
+header{
+
+    height: 4.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1rem;
+}
+
+.header__wrapper{
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header__links{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.header__login{
+
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+}
+
+.product__description{
+    
+    display: flex;
+}
