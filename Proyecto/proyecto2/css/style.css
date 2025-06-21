@@ -1,13 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root{
+
+    --font-size: 14px;
+    --font-title: "Montserrat", sans-serif;
+    --font-body: font-family: "Fraunces", serif;
+    
+}
+
+
 *{
 box-sizing: border-box;
 margin: 0;
 }
 
+html{
+
+    font-size: var(--font-size);
+    
+}
+
 body{
 
-    border: 1px solid red;
+/****/
 
 }
+
+
 
 a{
     text-decoration: none;
@@ -21,6 +41,7 @@ a{
 
     width: min(100%, 1440px);
     margin: 0 auto;
+    border: 1px solid red;
 }
 
 header{
@@ -31,6 +52,7 @@ header{
     align-items: center;
     padding: 1.5rem 1rem;
 }
+
 
 .header__wrapper{
 
@@ -52,7 +74,61 @@ header{
 
 }
 
-.product__description{
-    
+main{
+
+    width: 1440px;
+    min-height: 700px;
     display: flex;
+}
+
+.product__description{
+
+    border: 1px solid yellowgreen;
+    width: 940px;
+    padding-top: 100px;
+}
+
+
+.product__image{
+
+    border: 1px solid deepskyblue;
+    width: 500px;
+    
+}
+
+.product__image__logo{
+
+    width: 500px;
+    height: 700px;
+    padding: 30px 20px;
+}
+
+.product__title{
+
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-size: 3.5rem;
+    padding-bottom: 2.5rem;
+    color: hsl(212, 21%, 14%);
+
+}
+
+.product__p{
+
+    font-family: var(--font-body);
+    font-weight: 700;
+    padding-bottom: 3rem;
+    color: hsl(228, 12%, 48%);
+
+}
+
+.product__button{
+
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(212, 21%, 14%);
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 7px 14px;
+    font-family: var(--font-title);
+
 }
