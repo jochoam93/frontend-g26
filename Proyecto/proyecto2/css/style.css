@@ -5,8 +5,7 @@
 
     --font-size: 14px;
     --font-title: "Montserrat", sans-serif;
-    --font-body: font-family: "Fraunces", serif;
-    
+    --font-body:  "Fraunces", serif;
 }
 
 
@@ -18,11 +17,7 @@ margin: 0;
 html{
 
     font-size: var(--font-size);
-    
 }
-
-
-
 
 
 a{
