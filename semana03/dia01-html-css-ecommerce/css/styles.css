@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
 
 /* CUSTOM PROPERTIES <> VARIABLE / CONSTANTES */
@@ -92,26 +93,47 @@ header {
 }
 
 .header__links--menu {
-  opacity: 0;
-
   position: fixed;
   top: 0;
-  right: 0;
+  left: -300px;
   width: 300px;
   height: 100%;
 
-  background-color: red;
+  background-color: var(--neutral-white);
+
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 1.5rem 1rem;
+  font-weight: var(--font-weight-bold);
+
+  opacity: 0;
 }
 
 input[type=checkbox]:checked ~ .header__links--menu {
   opacity: 1;
+  left: 0px;
 }
 
 @media (min-width: 1200px) {
   .header__menu {
     display: none;
   }
+
+  .header__links--menu{
+    all: unset;
+  }
+
+  .header__links--menu label{
+
+    display: none;
+  
 }
+
+}
+
+
+
 
 .header__links {
   font-size: .9rem;
@@ -166,6 +188,54 @@ input[type=checkbox]:checked ~ .header__links--menu {
     border-radius: 1rem;
   }
 }
+
+.gallery__cover--wrapper{
+
+  position: relative;
+
+}
+
+.gallery__prev-button, .gallery__next-button{
+
+  background-color: var(--neutral-white);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+}
+
+.gallery__prev-button{
+
+  position: absolute;
+  top: 220px;
+  left: 30px;
+
+}
+
+.gallery__next-button{
+
+  position: absolute;
+  top: 220px;
+  right: 30px;
+
+
+}
+
+/*TODO: Ocultar los botones next y pre en dispositivos desktop*/
+
+@media(min-width:1200px){
+
+ .gallery__prev-button, .gallery__next-button{
+  
+  display: none;
+}
+
+}
+
 
 .gallery__slider {
   display: none;
@@ -354,3 +424,4 @@ input[type=checkbox]:checked ~ .header__links--menu {
   background-color: var(--primary-orange);
   opacity: .8;
 }
+
