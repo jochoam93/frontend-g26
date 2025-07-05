@@ -187,7 +187,7 @@ main {
     
 }
 
-/* MOBILE */
+/* DISEÑO MOBILE */
 
 @media (max-width: 768px) {
   .wrapper {
@@ -288,6 +288,6 @@ main {
     width: 100%;
     height: auto;
     margin: 2rem 0;
-    content: url("../images/image-hero-mobile.png"); /* Imagen móvil actualizada */
+    content: url("../images/image-hero-mobile.png"); /* Imagen para mobile */
   }
 }
